@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Wohnungssuche in Aachen Schanz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .title {
+            font-size: 24px;
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .details {
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleDetails() {
+            const details = document.getElementById('details');
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Wohnungssuche in Aachen Schanz</h2>
+    <div class="title" onclick="toggleDetails()">Miete zwei Monate für 200€</div>
+    <div id="details" class="details">
+        <p><strong>Adresse:</strong> Musterstraße 123, Aachen Schanz</p>
+        <p><strong>Preis:</strong> 200€ pro Monat</p>
+        <p><strong>Beschreibung:</strong> Eine gemütliche Wohnung im Herzen von Aachen Schanz. Ideal für kurze Aufenthalte.</p>
+        <button onclick="#">Kontaktieren Sie uns</button>
+    </div>
+</body>
+</html>

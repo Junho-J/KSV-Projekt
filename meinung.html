@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>의견 보네기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .form-container {
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #confirmation {
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function senden() {
+            const text = document.getElementById('meinung').value;
+            if (text.length > 0 && text.length <= 100) {
+                document.getElementById('confirmation').innerText = '의견 보네기';
+                document.getElementById('meinung').value = '';
+            } else {
+                alert('Bitte geben Sie eine Meinung mit weniger als 100 Zeichen ein.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Ihre Meinung</h2>
+    <div class="form-container">
+        <input type="text" id="meinung" placeholder="의견을 적어 주세요" maxlength="100">
+        <br>
+        <button onclick="senden()">Senden</button>
+        <br><br>
+        <button onclick="window.location.href='https://forms.google.com'">Zur Google Forms Meinung</button>
+        <div id="confirmation"></div>
+    </div>
+</body>
+</html>
